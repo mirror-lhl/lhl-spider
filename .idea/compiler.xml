@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lhl-spider-dao" />
+        <module name="lhl-spider-proxy" />
+        <module name="lhl-spider-service" />
+        <module name="lhl-spider-ai" />
+        <module name="lhl-spider-web" />
+        <module name="lhl-spider-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lhl-sprider-ai" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
