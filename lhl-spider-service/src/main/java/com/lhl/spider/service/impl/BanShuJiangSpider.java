@@ -10,19 +10,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.Resource;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Component
 @Slf4j
@@ -71,29 +64,8 @@ public class BanShuJiangSpider  extends CommonSpiderServiceImpl implements Commo
     }
 
     @Override
-    void downloadImage(String url, String filePah) {
-        URL downloadUrl = null;
-        try {
-            downloadUrl = new URL(url);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-        try(InputStream inputStream = downloadUrl.openStream();
-            FileOutputStream outputStream = new FileOutputStream(filePah)){
-           byte[] buffer = new byte[1024];
-           int bytesRead;
-           while ((bytesRead = inputStream.read(buffer)) != -1){
-               outputStream.write(buffer,0,bytesRead);
-           }
-        }catch (Exception e){
-            log.error("downloadImage.error",e.getCause());
-        }
-    }
-
-    @Override
     void pageDetail(String url) {
         WebDriver driver = seleniumService.openWebPage(url);
-//        String baseUrl = url.substring(0,url.indexOf(".cn")+3);
         downloadDetailPageImage(url);
 
         // click pdf links
@@ -158,6 +130,75 @@ public class BanShuJiangSpider  extends CommonSpiderServiceImpl implements Commo
 
         sleep(3000);
         seleniumService.closeWebPage(driver);
+    }
+
+    @Override
+    void spider(String url) {
+        //step1 from index url
+        String pageSource = getPageSource(url);
+        Document document = parse(pageSource);
+
+        Elements links = document.select("a");
+        for (Element link : links) {
+            String href = link.attr("href");
+            String realHref = link.absUrl("href");
+            // list page first
+            if (href.indexOf("e_books/page")==1){
+                String listDetail = getPageSource(href);
+                Document listDoc = parse(listDetail);
+                Elements detailUrls = listDoc.select("a");
+                for (Element detailUrl : detailUrls) {
+                    String detailHref = detailUrl.attr("href");
+                    String realDetailHref = detailUrl.absUrl("href");
+                    if (detailHref.indexOf("e_books/page") != -1){
+                        String text = detailUrl.text();
+                        if ("最旧".equals(text)){
+                            String allPageNumber = detailHref.substring(detailHref.lastIndexOf("/"));
+                            for (int i = 1; i <= Integer.valueOf(allPageNumber).intValue(); i++) {
+                                String next = getPageSource(href);
+                                Document nextDoc = parse(next);
+                                Elements nextElements = nextDoc.select("a");
+                                for (Element nextElement : nextElements) {
+                                    String nextHref = nextElement.attr("href");
+                                    String realNextHref = detailUrl.absUrl("href");
+                                    if (nextHref.indexOf("e_books/page") != -1){
+                                        continue;
+                                    }
+                                    if (nextHref.indexOf("e_books") != -1){
+                                        pageDetail(realNextHref);
+                                    }
+                                }
+                            }
+                        }
+                        continue;
+                    }
+                    if (detailHref.indexOf("e_books") != -1){
+                        log.info("detailHref.e_books:{}",href);
+                        pageDetail(realDetailHref);
+                    }
+                }
+                continue;
+            }
+            // page detail
+            if (href.indexOf("e_books") != -1){
+                log.info("href.e_books:{}",href);
+                pageDetail(realHref);
+                continue;
+            }
+            // category
+            if (href.indexOf("category") != -1){
+                log.info("href.category:{}",href);
+                // get this page a href for detailUrl
+                String category = getPageSource(href);
+                Document categoryDoc = parse(category);
+                Elements detailUrls = categoryDoc.select("a");
+                for (Element detailUrl : detailUrls) {
+//                    String detailHref = detailUrl.attr("href");
+                    String realDetailHref = detailUrl.absUrl("href");
+                    pageDetail(realDetailHref);
+                }
+            }
+        }
     }
 
     private void downloadDetailPageImage(String url) {

@@ -24,5 +24,16 @@ public interface CommonSpiderService {
      */
     Document parse(String htmlBody);
 
+    /**
+     * sleep times
+     * @param times
+     */
     void sleep(long times);
+
+    /**
+     * download images
+     * @param url
+     * @param filePah
+     */
+    void downloadImage(String url, String filePah);
 }

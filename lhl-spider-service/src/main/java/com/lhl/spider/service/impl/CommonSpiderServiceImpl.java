@@ -4,9 +4,15 @@ import com.lhl.spider.service.CommonSpiderService;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 @Component
@@ -45,6 +51,26 @@ public abstract class CommonSpiderServiceImpl implements CommonSpiderService {
         }
     }
 
+    @Override
+    public void downloadImage(String url, String filePah) {
+        URL downloadUrl = null;
+        try {
+            downloadUrl = new URL(url);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+        try(InputStream inputStream = downloadUrl.openStream();
+            FileOutputStream outputStream = new FileOutputStream(filePah)){
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1){
+                outputStream.write(buffer,0,bytesRead);
+            }
+        }catch (Exception e){
+            log.error("downloadImage.error",e.getCause());
+        }
+    }
+
     /**
      * get urls
      * @param document
@@ -59,19 +85,14 @@ public abstract class CommonSpiderServiceImpl implements CommonSpiderService {
     abstract void createFilePath(String filePath);
 
     /**
-     * download image
-     * @param url
-     * @param filePah
-     */
-    abstract void downloadImage(String url,String filePah);
-
-    /**
      * page detail
      * @param url
      */
     abstract void pageDetail(String url);
 
-//    public static void main(String[] args) throws IOException {
+    abstract void spider(String url);
+
+    public static void main(String[] args) throws IOException {
 //        String detailUrl = "http://www.banshujiang.cn/e_books/4791";
 //        Document document = Jsoup.connect(detailUrl).execute().parse();
 //
@@ -102,7 +123,7 @@ public abstract class CommonSpiderServiceImpl implements CommonSpiderService {
 
 //        String url = "http://www.banshujiang.cn/";
 //        Document document = Jsoup.connect(url).execute().parse();
-////        System.out.println(document.body());
+//        System.out.println(document.body());
 //
 //        Elements links = document.select("a");
 //        for (Element link : links) {
@@ -129,5 +150,5 @@ public abstract class CommonSpiderServiceImpl implements CommonSpiderService {
 //        }
 //        String attr = document.getElementsByTag("img").attr("src");
 //        System.out.println(attr);
-//    }
+    }
 }
