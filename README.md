@@ -1,5 +1,7 @@
 # Getting Started
-
+  > [用这个项目纪念我在Java开发中度过的时光]()\
+  > [2011.12  ~ 2024.12]()\
+  > [有任何问题，请下拉到文件底部，加我微信或者公众号]()
 ## Use Framework
 * [SpringBoot 2.3.12.RELEASE](https://spring.io/projects/spring-boot)
 * [Java 1.8](https://www.oracle.com/java/technologies/downloads/#java8)
@@ -7,7 +9,35 @@
 * [lombok](https://projectlombok.org/)
 * [jsoup 1.10.2](https://jsoup.org/)
 * [selenium-java 3.141.59](https://www.selenium.dev/)
-
+* [Druid](https://druid.apache.org/)
+* [MyBatis](https://blog.mybatis.org/)
+* [MyBatis-Plus](https://baomidou.com/)
+* [MySql](https://dev.mysql.com/downloads/mysql/)
+* [MongoDB](https://www.mongodb.com/try/download/community)
+* [HBase](https://hbase.apache.org/)
+* [RocketMQ](https://rocketmq.apache.org/)
+* [kafka](https://kafka.apache.org/)
+* [ACTIVEMQ](https://activemq.apache.org/)
+* [RabbitMQ](https://www.rabbitmq.com/)
+* [ElasticSearch](https://www.elastic.co/cn/elasticsearch)
+* [Redis](https://redis.io/)
+* [Memcached](https://memcached.org/)
+* [guava](https://github.com/google/guava)
+* [SpringCloud](https://spring.io/projects/spring-cloud)
+* [SpringCloud Alibaba](https://github.com/alibaba/spring-cloud-alibaba)
+* [Nacos](https://nacos.io/)
+* [Sentinel](https://sentinelguard.io/zh-cn/)
+* [Seata](https://seata.apache.org/)
+* [Dubbo](https://cn.dubbo.apache.org/zh-cn/)
+* [gRPC](https://grpc.io/)
+* [Netty](https://netty.io/)
+* [ZooKeeper](https://zookeeper.apache.org/index.html)
+* [etcd](https://etcd.io/)
+* [Consul](https://www.consul.io/)
+* [ShardingSphere](https://shardingsphere.apache.org/)
+* [XXL-JOB](https://www.xuxueli.com/xxl-job/)
+* [RegularExpressions](RegularExpressions.md)
+* [Cron](Cron.md)
 ## Project Structure Description
 * [lhl-spider-web]()
     > web service
@@ -27,18 +57,6 @@
 * [ProcessOn](https://www.processon.com/)
 * [github](https://github.com/)
 * [lhl-spider](https://github.com/mirror-lhl/lhl-spider)
-### 自媒体
-* [快手](https://cp.kuaishou.com/profile)
-* [抖音](https://creator.douyin.com/)
-* [B站](https://member.bilibili.com/)
-* [小红书](https://creator.xiaohongshu.com/)
-* [视频号](https://channels.weixin.qq.com/)
-* [百家号](https://baijiahao.baidu.com/)
-* [大鱼号](https://mp.dayu.com/)
-* [企鹅号](https://om.qq.com/userAuth/index)
-* [头条号](https://mp.toutiao.com/)
-* [公众号](https://mp.weixin.qq.com/)
-* [搜狐号](https://mp.sohu.com/)
 ### AI
 * [DeepSeek](https://deepseek.com/)
 * [Kimi](https://www.moonshot.cn/)
@@ -47,6 +65,9 @@
 * [文心一言](https://yiyan.baidu.com/)
 * [腾讯元宝](https://yuanbao.tencent.com/)
 * [AI-Tools](https://ai-bot.cn/)
+### 自学课程
+* [中国大学MOOC](https://www.icourse163.org/)
+* [RUNOOB](https://www.runoob.com/)
 ### 渗透测试
 * [OpenVAS](https://www.openvas.org/)
 * [Wireshark](https://www.wireshark.org/)
@@ -91,3 +112,20 @@
 * [中国裁判文书网](https://wenshu.court.gov.cn/)
 * [国家企业信用信息公示系统](https://www.gsxt.gov.cn/)
 * [统一社会信用代码查询](https://www.cods.org.cn/)
+### 自媒体
+* [快手](https://cp.kuaishou.com/profile)
+* [抖音](https://creator.douyin.com/)
+* [B站](https://member.bilibili.com/)
+* [小红书](https://creator.xiaohongshu.com/)
+* [视频号](https://channels.weixin.qq.com/)
+* [百家号](https://baijiahao.baidu.com/)
+* [大鱼号](https://mp.dayu.com/)
+* [企鹅号](https://om.qq.com/userAuth/index)
+* [头条号](https://mp.toutiao.com/)
+* [公众号](https://mp.weixin.qq.com/)
+* [搜狐号](https://mp.sohu.com/)
+---
+![关注公众号](gongzhonghao.png)
+---
+![加我微信](Wechat.jpg)
+
