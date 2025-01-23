@@ -1,7 +1,7 @@
 # Getting Started
-  > [用这个项目纪念我在Java开发中度过的时光]()\
-  > [2011.12  ~ 2024.12]()\
-  > [有任何问题，请下拉到文件底部，加我微信或者公众号]()
+  > [用这个项目纪念我在Java开发中度过的时光](#getting-started)\
+  > [2011.12  ~ 2024.12](#getting-started)\
+  > [有任何问题，请点击本行文字，自动跳转到文件底部，关注公众号](#关注公众号)
 ## Use Framework
 * [SpringBoot 2.3.12.RELEASE](https://spring.io/projects/spring-boot)
 * [Java 1.8](https://www.oracle.com/java/technologies/downloads/#java8)
@@ -55,7 +55,6 @@
 ## WebSite
 * [腾讯文档](https://docs.qq.com/)
 * [ProcessOn](https://www.processon.com/)
-* [github](https://github.com/)
 * [lhl-spider](https://github.com/mirror-lhl/lhl-spider)
 ### AI
 * [DeepSeek](https://deepseek.com/)
@@ -113,19 +112,24 @@
 * [国家企业信用信息公示系统](https://www.gsxt.gov.cn/)
 * [统一社会信用代码查询](https://www.cods.org.cn/)
 ### 自媒体
+> video
 * [快手](https://cp.kuaishou.com/profile)
 * [抖音](https://creator.douyin.com/)
 * [B站](https://member.bilibili.com/)
 * [小红书](https://creator.xiaohongshu.com/)
 * [视频号](https://channels.weixin.qq.com/)
+> images and texts
 * [百家号](https://baijiahao.baidu.com/)
 * [大鱼号](https://mp.dayu.com/)
 * [企鹅号](https://om.qq.com/userAuth/index)
 * [头条号](https://mp.toutiao.com/)
 * [公众号](https://mp.weixin.qq.com/)
 * [搜狐号](https://mp.sohu.com/)
+* [csdn](https://blog.csdn.net/lvhonglei1987)
+* [知乎](https://www.zhihu.com/people/lu-hong-lei-57)
 ---
+### 关注公众号
 ![关注公众号](gongzhonghao.png)
----
+### 加微信
 ![加我微信](Wechat.jpg)
 
