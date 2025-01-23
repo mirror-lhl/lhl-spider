@@ -129,9 +129,9 @@
 * [知乎](https://www.zhihu.com/people/lu-hong-lei-57)
 ---
 ### 关注公众号
-<img src="gongzhonghao.png" alt="关注公众号">
 
-[//]: # (![关注公众号]&#40;gongzhonghao.png&#41;)
+[//]: # (<img src="gongzhonghao.png" alt="关注公众号">)
+![关注公众号](gongzhonghao.png)
 ### 加微信
 ![加我微信](Wechat.jpg)
 
