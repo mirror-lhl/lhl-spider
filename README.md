@@ -56,6 +56,9 @@
 * [腾讯文档](https://docs.qq.com/)
 * [ProcessOn](https://www.processon.com/)
 * [lhl-spider](https://github.com/mirror-lhl/lhl-spider)
+### 找工作
+* [BOSS直聘](https://www.zhipin.com/)
+* [智联招聘](https://www.zhaopin.com/)
 ### AI
 * [DeepSeek](https://deepseek.com/)
 * [Kimi](https://www.moonshot.cn/)
@@ -112,13 +115,13 @@
 * [国家企业信用信息公示系统](https://www.gsxt.gov.cn/)
 * [统一社会信用代码查询](https://www.cods.org.cn/)
 ### 自媒体
-> video
+> [video]()
 * [快手](https://cp.kuaishou.com/profile)
 * [抖音](https://creator.douyin.com/)
 * [B站](https://member.bilibili.com/)
 * [小红书](https://creator.xiaohongshu.com/)
 * [视频号](https://channels.weixin.qq.com/)
-> images and texts
+> [images and texts]()
 * [百家号](https://baijiahao.baidu.com/)
 * [大鱼号](https://mp.dayu.com/)
 * [企鹅号](https://om.qq.com/userAuth/index)
@@ -127,6 +130,8 @@
 * [搜狐号](https://mp.sohu.com/)
 * [csdn](https://blog.csdn.net/lvhonglei1987)
 * [知乎](https://www.zhihu.com/people/lu-hong-lei-57)
+### 网站搭建
+* [WordPress](https://wordpress.org/download/)
 ---
 ### 关注公众号
 
